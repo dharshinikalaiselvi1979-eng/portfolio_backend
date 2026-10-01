@@ -38,7 +38,7 @@ module.exports = {
         'roadmap and recommended courses and projects, and includes a mentor chatbot for guidance. Includes ' +
         'user login with roles and an admin area for managing questions, viewing analytics and exporting data.',
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Supabase', 'Framer Motion', 'Recharts'],
-      link: 'https://github.com/dharshinikalaiselvi1979-eng/career-guide',
+      link: 'https://github.com/dharshinikalaiselvi1979-eng/CAREER-COMPASS-GUIDE',
       image: '/uploads/careercompass.webp'
     },
     {
