@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Uploads directory - preserve essential demo images
+uploads/*
+!uploads/.gitkeep
+!uploads/*.webp
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
