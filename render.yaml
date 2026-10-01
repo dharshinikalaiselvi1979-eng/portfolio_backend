@@ -19,4 +19,4 @@ services:
       - key: SEED_ADMIN_PASSWORD
         value: admin123456
       - key: MONGODB_URI
-        sync: false
+        value: "standalone"
