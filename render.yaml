@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: portfolio-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: SEED_ADMIN_EMAIL
+        value: dharshinikalaiselvi1979@gmail.com
+      - key: SEED_ADMIN_PASSWORD
+        value: admin123456
+      - key: MONGODB_URI
+        sync: false
