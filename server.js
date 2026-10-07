@@ -40,9 +40,19 @@ app.use(['/api/content', '/content'], contentRoutes);
 app.use(['/api/upload', '/upload'], uploadRoutes);
 app.use(['/api/contact', '/contact'], contactRoutes);
 
-// Health check
-app.get(['/api/health', '/health'], (req, res) => {
-  res.json({ status: 'CMS Backend Running' });
+// Health check & root status
+app.get(['/', '/api', '/api/health', '/health'], (req, res) => {
+  res.json({
+    status: '✅ Portfolio CMS Backend Running',
+    version: '1.0.0',
+    endpoints: {
+      auth: '/api/auth',
+      content: '/api/content',
+      skills: '/api/content/skills',
+      projects: '/api/content/projects',
+      health: '/api/health'
+    }
+  });
 });
 
 // Centralized error handler
