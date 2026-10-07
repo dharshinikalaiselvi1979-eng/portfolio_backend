@@ -34,14 +34,14 @@ app.use(express.json());
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use('/uploads', express.static('uploads'));
 
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/content', contentRoutes);
-app.use('/api/upload', uploadRoutes);
-app.use('/api/contact', contactRoutes);
+// Routes (support both /api/* and root /* for seamless deployment)
+app.use(['/api/auth', '/auth'], authRoutes);
+app.use(['/api/content', '/content'], contentRoutes);
+app.use(['/api/upload', '/upload'], uploadRoutes);
+app.use(['/api/contact', '/contact'], contactRoutes);
 
 // Health check
-app.get('/api/health', (req, res) => {
+app.get(['/api/health', '/health'], (req, res) => {
   res.json({ status: 'CMS Backend Running' });
 });
 
